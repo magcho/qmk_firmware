@@ -350,19 +350,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         // exceptionaly ctrl layer用設定
         if (ctrl_pressed || exceptionaly_ctrl_layer_pressed) {
             switch (keycode) {
-            case KC_J:
-                if (record->event.pressed) {
-                    unregister_code(KC_LCTRL);
-                    register_code(KC_BSPACE);
-                    exceptionaly_ctrl_layer_pressed = true;
-                } else {
-                    unregister_code(KC_BSPACE);
-                    if (ctrl_pressed) {
-                        register_code(KC_LCTRL);
-                    }
-                    exceptionaly_ctrl_layer_pressed = false;
-                }
-                return false;
+            /* case KC_J: */
+            /*     if (record->event.pressed) { */
+            /*         unregister_code(KC_LCTRL); */
+            /*         register_code(KC_BSPACE); */
+            /*         exceptionaly_ctrl_layer_pressed = true; */
+            /*     } else { */
+            /*         unregister_code(KC_BSPACE); */
+            /*         if (ctrl_pressed) { */
+            /*             register_code(KC_LCTRL); */
+            /*         } */
+            /*         exceptionaly_ctrl_layer_pressed = false; */
+            /*     } */
+            /*     return false; */
 
             case KC_N:
                 if (record->event.pressed) {
